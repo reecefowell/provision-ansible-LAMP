@@ -4,4 +4,6 @@
     - common-system
     - common-packages
     - prereq-git
+    - prereq-nodejs
+    - prereq-nodejs-packages
     - nginx

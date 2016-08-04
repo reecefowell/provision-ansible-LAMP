@@ -1,0 +1,2 @@
+- name: Install LESS
+  npm: name=less global=yes version=1
