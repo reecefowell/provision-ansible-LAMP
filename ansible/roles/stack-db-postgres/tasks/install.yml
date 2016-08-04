@@ -1,0 +1,5 @@
+- name: Install PostgreSQL
+  apt: package={{ item }}
+  with_items:
+    - postgresql
+    - python-psycopg2

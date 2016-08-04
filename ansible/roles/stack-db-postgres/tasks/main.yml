@@ -1,0 +1,4 @@
+- include: install.yml
+- include: configure-disable-fsync.yml
+- include: configure-maxconnections.yml
+- include: configure-user.yml

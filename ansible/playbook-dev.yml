@@ -8,5 +8,6 @@
     - prereq-nodejs-packages
     - prereq-ruby
     - prereq-ruby-packages
+    - stack-db-postgres
     - stack-nginx
     - stack-php

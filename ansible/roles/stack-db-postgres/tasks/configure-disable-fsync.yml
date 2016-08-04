@@ -1,0 +1,13 @@
+- name: Disable fsync for PostgreSQL
+  lineinfile:
+        dest=/etc/postgresql/9.3/main/postgresql.conf
+        line="fsync = 'off'"
+        insertafter=EOF
+  notify: Restart PostgreSQL
+
+- name: Disable full_page_writes for PostgreSQL
+  lineinfile:
+        dest=/etc/postgresql/9.3/main/postgresql.conf
+        line="full_page_writes = 'off'"
+        insertafter=EOF
+  notify: Restart PostgreSQL
