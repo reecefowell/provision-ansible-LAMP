@@ -1,5 +1,8 @@
 ---
-- hosts: all
+- hosts: 
+    - dev-local
+    - dev-remote
+    - dev-vagrant
   sudo: true
   roles: 
     - common-system

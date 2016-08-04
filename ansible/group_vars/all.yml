@@ -1,8 +1,11 @@
+---
 unsafe: false
-user: www-data
-group: www-date
 
 db:
   name: site
   user: site
   pass: site
+
+nginx:
+  user: www-data
+  group: www-data

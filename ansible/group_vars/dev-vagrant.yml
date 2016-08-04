@@ -1,0 +1,12 @@
+---
+unsafe: true
+
+ansible_ssh_user: vagrant
+ansible_ssh_pass: vagrant
+path: /vagrant
+vagrant: true
+test: true
+
+sys:
+  user: vagrant
+  group: vagrant

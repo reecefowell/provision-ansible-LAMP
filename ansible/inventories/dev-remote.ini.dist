@@ -1,2 +1,2 @@
-[dev_remote]
-192.168.0.52
+[dev-remote]
+192.168.0.52    ansible_connection=ssh    ansible_ssh_user=reece
