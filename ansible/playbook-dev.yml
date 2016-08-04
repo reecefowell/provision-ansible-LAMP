@@ -3,4 +3,5 @@
   roles: 
     - common-system
     - common-packages
+    - prereq-git
     - nginx
