@@ -4,3 +4,4 @@
     name=sass
     state=latest
     user_install=no
+  sudo: false

@@ -3,4 +3,6 @@
   npm: >
     name=less
     global=yes
+    state=present
     version=1
+  sudo: false

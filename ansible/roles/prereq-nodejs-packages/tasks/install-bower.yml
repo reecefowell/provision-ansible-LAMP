@@ -3,3 +3,5 @@
   npm: >
     name=bower
     global=yes
+    state=present
+  sudo: false
