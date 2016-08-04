@@ -1,0 +1,9 @@
+- name: Install PHP
+  apt: pkg={{ item }}
+  with_items:
+    - php5-fpm
+    - php5-cli
+    - php5-curl
+    - php5-pgsql
+    - php5-gd
+  notify: Restart php-fpm
