@@ -1,1 +1,0 @@
-ansible-playbook --ask-sudo-pass -i ./inventories/dev-local.ini ./dev.yml --connection=local
