@@ -1,0 +1,5 @@
+- name: Install Ruby
+  apt: pkg={{ item }}
+  with_items:
+    - ruby-dev
+    - build-essential
