@@ -1,1 +1,3 @@
 - include: install.yml
+- include: start.yml
+- include: vhost.yml

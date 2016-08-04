@@ -1,0 +1,10 @@
+# - name: Add known hosts to known_hosts file
+#   lineinfile: >
+#     dest=~{{ ansible_ssh_user }}/.ssh/known_hosts
+#     regexp="^{{ item.host }}"
+#     line="{{ item.line }}"
+#     create=yes
+#     owner={{ ansible_ssh_user }}
+#     group={{ ansible_ssh_user }}
+#   with_items:
+#    - { "host": "github.com", "line": "github.com ssh-rsa " }

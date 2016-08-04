@@ -1,0 +1,2 @@
+#- name: Add the app domain to hosts
+#  lineinfile: dest=/etc/hosts regexp='^127\.0\.0\.1 {{ hosts|join(" ") }}' line='127.0.0.1 {{ hosts|join(" ") }}'

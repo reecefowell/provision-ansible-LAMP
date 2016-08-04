@@ -1,0 +1,6 @@
+- include: locale.yml
+  when: unsafe
+- include: known-hosts.yml
+  when: unsafe
+- include: host.yml
+  when: test is defined
