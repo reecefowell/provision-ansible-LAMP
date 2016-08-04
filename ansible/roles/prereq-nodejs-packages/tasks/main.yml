@@ -1,2 +1,3 @@
 - include: install-bower.yml
 - include: install-less.yml
+- include: install-gulpjs.yml
