@@ -1,16 +1,19 @@
+---
 - name: Detect timezone
   shell: cat /etc/timezone
   register: timezone
 
 - name: Set PHP FPM timezone
-  ini_file: dest=/etc/php5/fpm/php.ini
-            section=Date
-            option=date.timezone
-            value="{{ timezone.stdout }}"
+  ini_file: >
+    dest=/etc/php5/fpm/php.ini
+    section=Date
+    option=date.timezone
+    value="{{ timezone.stdout }}"
   notify: Restart php-fpm
 
 - name: Set PHP CLI timezone
-  ini_file: dest=/etc/php5/cli/php.ini
-            section=Date
-            option=date.timezone
-            value="{{ timezone.stdout }}"
+  ini_file: >
+    dest=/etc/php5/cli/php.ini
+    section=Date
+    option=date.timezone
+    value="{{ timezone.stdout }}"

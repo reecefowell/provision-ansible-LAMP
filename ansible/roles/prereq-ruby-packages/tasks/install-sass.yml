@@ -1,3 +1,6 @@
+---
 - name: Install SASS
-  gem: name=sass state=latest user_install=no
-
+  gem: >
+    name=sass
+    state=latest
+    user_install=no

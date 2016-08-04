@@ -1,8 +1,14 @@
+---
 - name: Create user for the app
-  postgresql_user: user={{ db.user }} password={{ db.pass }}
+  postgresql_user: >
+    user={{ db.user }}
+    password={{ db.pass }}
   sudo_user: postgres
 
 - name: Make current user PostgreSQL superuser
-  postgresql_user: user={{ user }} password={{ user }} role_attr_flags=SUPERUSER
+  postgresql_user: >
+    user={{ user }}
+    password={{ user }}
+    role_attr_flags=SUPERUSER
   sudo_user: postgres
   when: unsafe

@@ -3,6 +3,6 @@ user: www-data
 group: www-date
 
 db:
-    name: site
-    user: site
-    pass: site
+  name: site
+  user: site
+  pass: site

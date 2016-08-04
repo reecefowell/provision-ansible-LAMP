@@ -1,3 +1,4 @@
+---
 - name: Install common packages
   apt: pkg={{ item }}
   with_items:

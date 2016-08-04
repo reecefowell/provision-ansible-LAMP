@@ -1,2 +1,6 @@
+---
 - name: Update all packages
-  apt: upgrade=full update_cache=yes cache_valid_time=86400
+  apt: >
+    upgrade=full
+    update_cache=yes
+    cache_valid_time=86400

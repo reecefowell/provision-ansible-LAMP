@@ -1,3 +1,4 @@
+---
 # - name: Add known hosts to known_hosts file
 #   lineinfile: >
 #     dest=~{{ ansible_ssh_user }}/.ssh/known_hosts

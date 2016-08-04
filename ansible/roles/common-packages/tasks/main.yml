@@ -1,3 +1,5 @@
+---
 - include: update.yml
   when: unsafe
+
 - include: packages.yml

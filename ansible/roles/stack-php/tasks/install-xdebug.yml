@@ -1,3 +1,4 @@
+---
 - name: Install Xdebug
   apt: pkg=php5-xdebug
   notify: Restart php-fpm

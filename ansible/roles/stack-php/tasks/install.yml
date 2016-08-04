@@ -1,3 +1,4 @@
+---
 - name: Install PHP
   apt: pkg={{ item }}
   with_items:

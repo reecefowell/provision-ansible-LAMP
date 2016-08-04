@@ -1,2 +1,5 @@
+---
 - name: Install Bower
-  npm: name=bower global=yes
+  npm: >
+    name=bower
+    global=yes

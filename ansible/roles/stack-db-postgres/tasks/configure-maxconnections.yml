@@ -1,6 +1,7 @@
+---
 - name: Set max_connections limit to 300
-  lineinfile:
-        dest=/etc/postgresql/9.3/main/postgresql.conf
-        line="max_connections = 300"
-        insertafter=EOF
+  lineinfile: >
+    dest=/etc/postgresql/9.3/main/postgresql.conf
+    line="max_connections = 300"
+    insertafter=EOF
   notify: Restart PostgreSQL

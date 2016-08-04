@@ -1,3 +1,4 @@
+---
 - name: Install PostgreSQL
   apt: package={{ item }}
   with_items:
