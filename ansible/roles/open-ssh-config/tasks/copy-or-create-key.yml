@@ -1,0 +1,20 @@
+---
+- name: copy host key to remote machine
+  copy: >
+    src=~/.ssh/id_rsa.pub
+    dest=~/.ssh/id_rsa_workstation.pub
+    mode=0644
+
+- name: copy existing remote key when set
+  copy: >
+    src="{{ remote_key }}"
+    dest=~/.ssh/id_rsa
+    mode=0600
+
+- name: copy existing remote key when set
+  copy: >
+    src="{{ remote_key }}.pub"
+    dest=~/.ssh/id_rsa.pub
+    mode=0644
+
+# create remote key when not set

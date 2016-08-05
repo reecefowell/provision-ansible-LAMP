@@ -1,0 +1,5 @@
+---
+- include: setup-directory.yml
+- include: copy-or-create-key.yml
+- include: configure-ssh-keys.yml
+- include: configure-ssh-server.yml

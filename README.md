@@ -8,7 +8,14 @@ Copy dist file of required inventory file, for example `ansible/inventories/*.in
 
 Make changes to the inventory file copy as necessary.
 
-Running
+
+Running SSH setup on Remote Machine
+---
+
+`ansible-playbook -i '192.168.0.222,' playbook-ssh.yml --ask-sudo-pass --user=reece --ask-pass -vvvv -e 'remote_key=~/.ssh/scripts/ubuntu-14-vm/keys/id_rsa_ubuntu14'`
+
+
+Running LAMP stack deploy on Remote Machine
 ---
 
 Run dev on remote machine over SSH when user preconfigured in inventory
@@ -25,3 +32,6 @@ Run dev on remote machine over ssh with unsafe settings
 
 Run dev on local machine
 `ansible-playbook ./ansible/playbook-dev.yml -i ansible/inventories/dev-remote.ini -vvvv --ask-sudo-pass --connection=local -e 'unsafe=true'`
+
+
+

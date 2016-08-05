@@ -1,0 +1,20 @@
+---
+# - name: eval ssh agent
+#   shell: echo "eval $(ssh-agent)"
+
+- name: add key to ssh agent
+  shell: eval $(ssh-agent) && ssh-add ~/.ssh/id_rsa
+  notify: Restart SSH
+
+- name: backup authorized_keys
+  shell: cp ~/.ssh/authorized_keys ~/.ssh/authorized_keys.backup.1
+
+- name: add host machine to authorized_keys
+  shell: cat ~/.ssh/id_rsa_workstation.pub >> ~/.ssh/authorized_keys
+  notify: Restart SSH
+
+# - name: add host machine to authorized_keys
+#   authorized_key: >
+#     user: reece
+#     key:  "{{ lookup('file', '~/.ssh/id_rsa_workstation.pub') }}"
+#   notify: Restart SSH

@@ -1,0 +1,36 @@
+---
+- name: stat backup /etc/ssh/ssh_config file
+  stat: path=/etc/ssh/ssh_config.factory
+  register: ssh_config_backup
+  sudo: true
+
+- name: move backup /etc/ssh/ssh_config file
+  shell: mv /etc/ssh/ssh_config /etc/ssh/ssh_config.factory
+  when: ssh_config_backup.stat.exists == False
+  sudo: true
+
+
+- name: stat backup /etc/ssh/sshd_config file
+  stat: path=/etc/ssh/sshd_config.factory
+  register: sshd_config_backup
+  sudo: true
+
+- name: move backup /etc/ssh/sshd_config file
+  shell: mv /etc/ssh/sshd_config /etc/ssh/sshd_config.factory
+  when: sshd_config_backup.stat.exists == False
+  sudo: true
+
+- name: configure /etc/ssh/ssh_config file
+  copy: >
+    src=ssh_config
+    dest=/etc/ssh/ssh_config
+    mode=0644
+  sudo: true
+
+- name: configure /etc/ssh/sshd_config file
+  copy: >
+    src=sshd_config
+    dest=/etc/ssh/sshd_config
+    mode=0644
+  notify: Restart SSH
+  sudo: true

@@ -1,0 +1,6 @@
+---
+- hosts: 
+    - all
+  sudo: false
+  roles: 
+    - open-ssh-config

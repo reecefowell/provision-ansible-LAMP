@@ -1,0 +1,24 @@
+---
+- name: Create ~/.ssh directory
+  file: >
+    path=~/.ssh
+    state=directory
+    mode=0700
+
+- name: Create ~/.ssh/authorized_keys file
+  file: >
+    path=~/.ssh/authorized_keys
+    state=touch
+    mode=0700
+
+- name: Create ~/.ssh/known_hosts file
+  file: >
+    path=~/.ssh/known_hosts
+    state=touch
+    mode=0700
+
+- name: Copy ~/.ssh/config file
+  copy: >
+    src=config
+    dest=~/.ssh/config
+    mode=0644
