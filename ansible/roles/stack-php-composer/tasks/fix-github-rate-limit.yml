@@ -1,0 +1,9 @@
+---
+- name: Fix composer github rate limit process-timeout
+  shell: composer config --global process-timeout 600
+
+- name: Fix composer github rate limit preferred-install
+  shell: composer config --global preferred-install dist
+
+- name: Fix composer github rate limit github-protocols
+  shell: composer config --global github-protocols https

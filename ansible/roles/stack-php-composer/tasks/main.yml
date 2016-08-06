@@ -1,0 +1,3 @@
+---
+- include: install.yml
+- include: fix-github-rate-limit.yml

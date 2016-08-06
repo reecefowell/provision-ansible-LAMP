@@ -15,3 +15,4 @@
     - stack-db-postgres
     - stack-nginx
     - stack-php
+    - stack-php-composer

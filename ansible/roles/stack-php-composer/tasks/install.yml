@@ -1,0 +1,7 @@
+---
+- name: Install composer
+  shell: cd /tmp && php -r "readfile('https://getcomposer.org/installer');" | php
+
+- name: Make composer global
+  shell: mv /tmp/composer.phar /usr/local/bin/composer
+  sudo: true
