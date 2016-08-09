@@ -1,10 +1,12 @@
 ---
 - hosts: 
+    - all
     - dev-local
     - dev-remote
     - dev-vagrant
   sudo: true
   roles: 
+    - common-config-project-dir
     - common-system
     - common-packages
     - prereq-git

@@ -1,0 +1,7 @@
+---
+- name: Create /home/reece/projects directory
+  file: >
+    path=/home/reece/projects
+    state=directory
+    mode=0777
+  sudo: false

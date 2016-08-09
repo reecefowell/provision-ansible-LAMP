@@ -1,0 +1,9 @@
+---
+- name: Create /var/nfs directory
+  file: >
+    path=/var/nfs
+    state=directory
+    mode=0777
+    owner=nobody
+    group=nogroup
+  sudo: true

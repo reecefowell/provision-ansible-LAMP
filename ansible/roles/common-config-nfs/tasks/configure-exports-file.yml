@@ -1,0 +1,7 @@
+---
+- name: configure /etc/exports file
+  copy: >
+    src=nfs-exports
+    dest=/etc/exports
+    mode=0777
+  sudo: true

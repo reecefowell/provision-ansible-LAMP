@@ -1,0 +1,6 @@
+---
+- name: Restart NFS server
+  service: >
+    name=nfs-kernel-server
+    state=restarted
+  sudo: true

@@ -1,0 +1,5 @@
+---
+- name: exportfs
+  shell: exportfs -a
+  sudo: true
+  notify: Restart NFS server

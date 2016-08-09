@@ -4,4 +4,4 @@
   sudo: false
   roles: 
     - common-config-project-dir
-    - common-config-ssh
+    - common-config-nfs

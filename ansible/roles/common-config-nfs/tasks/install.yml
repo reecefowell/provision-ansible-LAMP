@@ -1,0 +1,6 @@
+---
+- name: Install nfs-kernel-server
+  apt: pkg={{ item }}
+  with_items:
+    - nfs-kernel-server
+  sudo: true
