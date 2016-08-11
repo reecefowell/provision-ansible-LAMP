@@ -1,0 +1,8 @@
+---
+- name: add key to ssh agent
+  shell: curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+  sudo: true
+
+- name: add key to ssh agent
+  shell: chmod a+x /usr/local/bin/symfony
+  sudo: true
