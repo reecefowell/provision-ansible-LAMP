@@ -1,1 +1,1 @@
-/home/reece/projects *(rw,async,insecure,all_squash,no_subtree_check,anonuid=1001,anongid=1001)
+/home/reece/projects *(rw,sync,insecure,all_squash,no_subtree_check,anonuid=1001,anongid=1001)
